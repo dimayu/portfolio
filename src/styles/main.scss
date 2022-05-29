@@ -1,14 +1,130 @@
-// Переменные, миксины, функции
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
+@import "smart-grid.scss";
 
-// CSS-файлы библиотек
-@import "vendor/libs";
+@include reset();
 
-// Основное
-@import "base/fonts";
-@import "base/general";
+$color: #e07f14;
 
-// БЭМ-блоки
-@import "../blocks/modules";
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.2;
+  color: #ffffff;
+
+  #fp-nav ul li a span {
+    background-color: $color;
+  }
+}
+
+.wrapper {
+  padding: 100px;
+}
+
+.aside {
+  position: absolute;
+  width: 60px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  padding: 20px 10px;
+
+  .border {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    right: 0;
+    top: 0;
+    background-color: $color;
+  }
+}
+
+.lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+
+  span {
+    display: block;
+    
+    &:nth-child(1) {
+      width: 1px;
+      height: 30px;
+      background-color: #ffffff;
+    }
+
+    &:nth-child(2) {
+      width: 1px;
+      height: 60px;
+      background-color: #ffffff;
+    }
+
+    &:nth-child(3) {
+      width: 1px;
+      height: 30px;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin-top: 10px;
+  }
+  
+  i {
+    font-size: 20px;
+    color: #ffffff;
+
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+.nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 80%;
+  height: auto;
+}
+
+h1 {
+  font-size: 40px;
+  overflow: hidden;
+}
+
+.section {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      width: 48%;
+      overflow: hidden;
+    }
+  }
+}
+
+.section-home{
+  background-color: #1d1d1d;
+}
+
+.section-about{
+  background-color: #383636;
+}
+
+.section-stack{
+  background-color: #3f3f3f;
+}
