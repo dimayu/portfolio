@@ -27,14 +27,19 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.7/fullpage.css"
-          integrity="sha512-g+xyrYTXR0jF5EZGiQUMisX9Rv9RfTnbaOKe9AJsjBVBMG9bk6aYXqYujStYTKPTDEcVo+6eLziI7Hr4GV1C1w=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css"
+          integrity="sha512-W9OWS8dgpQBw5Hb+tbMto1BMsHvYOXT/AFBGvASCPUJleaEdpOAN5lzgj9RrTbo3YrlR+m9xdOBccp8F+SFyQg=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
+
+<div class="preloader">
+    <div class="loader"></div>
+</div>
 
 <aside class="aside">
     <nav class="nav">
@@ -50,13 +55,16 @@
             <a href="https://www.linkedin.com/in/damir-sharipzyanov-572525216/" class="social-links__item-1">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="tg://resolve?domain=D_Sh82/" class="social-links__item-2">
+            <a href="https://github.com/dimayu" class="social-links__item-2">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="tg://resolve?domain=D_Sh82/" class="social-links__item-3">
                 <i class="fa-brands fa-telegram"></i>
             </a>
-            <a href="mailto:mailto:dimayu82@gmail.com" class="social-links__item-3">
+            <a href="mailto:mailto:dimayu82@gmail.com" class="social-links__item-4">
                 <i class="fa-regular fa-envelope"></i>
             </a>
-            <a href="https://hi-inet.ru/skype:dimayu82@gmail.com" class="social-links__item-4">
+            <a href="https://hi-inet.ru/skype:dimayu82@gmail.com" class="social-links__item-5">
                 <i class="fa-brands fa-skype"></i>
             </a>
         </div>
@@ -64,7 +72,6 @@
     <div class="border"></div>
 </aside>
 
-<!--    @@include("../blocks/modules/faq/faq.html")-->
 <div id="fullpage">
     <div class="section section-home">
         <div class="wrapper">
@@ -72,29 +79,243 @@
                 <div class="section__items__item">
                     <h1>
                         <span class="title">Привет!</span><br>
-                        <span class="title">Меня зовут<br>Шарипзянов Дамир.</span><br>
-                        <span class="title">Я web developer</span>
+                        <span class="title">Меня зовут</span><br>
+                        <span>Шарипзянов Дамир.</span>
                     </h1>
+                    <h2>
+                        <span class="title">Я web developer</span>
+                    </h2>
                 </div>
-                <div class="section__items__item">
-                    <img src="img/foto.jpg" alt="foto">
+                <div class="section__items__item section__items__item--photo">
+                    <img src="img/photo.png" alt="foto" width="300px" height="300px">
                 </div>
             </div>
         </div>
     </div>
-    <div class="section section-about">Some section</div>
-    <div class="section section-stack">Some section</div>
-    <div class="section section-portfolio">Some section</div>
-    <div class="section section-contacts">Some section</div>
+    <section class="section section-about">
+        <div class="wrapper">
+            <div class="section__items">
+                <div class="section__items__item">
+                    <h2>
+                        <span>Обо мне</span>
+                    </h2>
+                    <p class="text"></p>
+                </div>
+                <div class="section__items__item">
+                    <div class="box">
+                        <span class="field-1 field">HTML</span>
+                        <span class="field-2 field">CSS</span>
+                        <span class="field-3 field">SCSS</span>
+                        <span class="field-4 field">JS</span>
+                        <span class="field-5 field">WP</span>
+                        <span class="field-6 field">JOOMLA</span>
+                        <span class="field-7 field">GIT</span>
+                        <span class="field-8 field">NPM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-stack">
+        <div class="wrapper">
+            <div class="section__items">
+                <div class="section__items__item">
+                    <h2>
+                        <span>Мой стек</span>
+                    </h2>
+                </div>
+                <div class="section__items__item">
+                    <div class="stack">
+                        <div class="stack__title">HTML</div>
+                        <div class="stack__percent stack__percent--1"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">CSS</div>
+                        <div class="stack__percent stack__percent--2"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">SCSS</div>
+                        <div class="stack__percent stack__percent--3"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">LESS</div>
+                        <div class="stack__percent stack__percent--4"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">JS</div>
+                        <div class="stack__percent stack__percent--5"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">NPM</div>
+                        <div class="stack__percent stack__percent--6"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">GIT</div>
+                        <div class="stack__percent stack__percent--7"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">FIGMA</div>
+                        <div class="stack__percent stack__percent--8"></div>
+                    </div>
+                    <div class="stack">
+                        <div class="stack__title">Photoshop</div>
+                        <div class="stack__percent stack__percent--9"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-portfolio">
+        <div class="wrapper">
+            <div class="section-portfolio__content">
+                <div class="section__items__item-p">
+                    <h2>
+                        <span>Мои работы</span>
+                    </h2>
+                </div>
+
+                <div class="portfolio__items">
+                    <div class="portfolio__items__item">
+                        <img src="img/taxi.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка многостраничного сайта</li>
+                                <li>Интеграция на JOOMLA</li>
+                            </ul>
+                            <a href="https://taxi-vivo.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/82-15.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка многостраничного сайта</li>
+                                <li>Интеграция на JOOMLA</li>
+                            </ul>
+                            <a href="https://8215.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/sarsteklo.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка многостраничного сайта</li>
+                            </ul>
+                            <a href="https://sarsteklostroy.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/westwing.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Проработал в компании 9 месяцев</li>
+                                <li>Редизайн сайта</li>
+                            </ul>
+                            <a href="https://www.westwing.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/arlihan.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка многостраничного сайта</li>
+                            </ul>
+                            <a href="https://arhilan.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/artwood.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка лендинга</li>
+                                <li>Интеграция на JOOMLA</li>
+                            </ul>
+                            <a href="https://shkaf.8215.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/bitovka.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка лендинга</li>
+                                <li>Интеграция на JOOMLA</li>
+                            </ul>
+                            <a href="https://xn--80abd4acjpnu1gc.xn--p1ai/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/cosas.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка многостраничного сайта</li>
+                            </ul>
+                            <a href="https://cosas-nubes.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/eko.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка многостраничного сайта</li>
+                            </ul>
+                            <a href="https://ileco-23.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__items__item">
+                        <img src="img/dsk.jpg" alt="pic" class="portfolio__items__item--pic">
+                        <div class="portfolio__items__item--text">
+                            <ul>
+                                <li>Верстка многостраничного сайта</li>
+                                <li>Интеграция на WP</li>
+                            </ul>
+                            <a href="https://dobraya-stroy.ru/" target="_blank">перейти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-contacts">
+        <div class="wrapper">
+            <div class="section__items__item">
+                <h2><span>Контакты</span></h2>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/damir-sharipzyanov-572525216/">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/dimayu">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="tg://resolve?domain=D_Sh82/">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="mailto:mailto:dimayu82@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                </a>
+                <a href="https://hi-inet.ru/skype:dimayu82@gmail.com">
+                    <i class="fa-brands fa-skype"></i>
+                </a>
+                <a href="resume.pdf" download="resume.pdf">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Резюме</span>
+                </a>
+            </div>
+        </div>
+    </section>
 </div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.7/fullpage.min.js"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.js"
+        integrity="sha512-FcXc9c211aHVJEHxoj2fNFeT8+wUESf/4mUDIR7c31ccLF3Y6m+n+Wsoq4dp2sCnEEDVmjhuXX6TfYNJO6AG6A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
 <script src="https://kit.fontawesome.com/23b4085b53.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/TextPlugin.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 
